@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Календарь</title>
+    <link rel="stylesheet" property="stylesheet" href="css/main.css"/>
+    <link rel="shortcut icon" href="img/logo.png">
+  </head>
+  <body>
+    <div class="set">
+            <div class="m8 ml10 t11 d12">
+                <div class="header">
+                <div class="header-nav">
+                    <ul>
+                    <ol><a href="index.html" target="_blank">Главная</a></ol>
+                    <ol><a href="#">Календарь </a></ol>
+                    <ol> <a href="contacts.html" target="_blank">Контакты</a></ol>
+                    </ul>
+                </div>
+                </div>
+            </div> 
+      <div class="m8 ml10 t11 d12">
+        <div class="content">
+            <style>
+                #calendar2 {
+                  width: 100%;
+                  line-height: 1.2em;
+                  font-size: 20px;
+                  text-align: center;
+                  padding-top: 20px
+                }
+                #calendar2 thead tr:last-child {
+                  
+                  color: rgb(85, 85, 85);
+                }
+                #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+                  color: rgb(50, 50, 50);
+                }
+                #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+                  cursor: pointer;
+                }
+                #calendar2 tbody td {
+                  color: rgb(44, 86, 122);
+                }
+                #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+                  color: rgb(141, 8, 8);
+                }
+                #calendar2 tbody td.today {
+                  background: #1697c2;
+                  color: #fff;
+                }
+                </style>
+                
+                <table id="calendar2">
+                  <thead>
+                    <tr><td>‹<td colspan="5"><td>›
+                    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                  <tbody>
+                </table>
+                
+                <script>
+                function Calendar2(id, year, month) {
+                var Dlast = new Date(year,month+1,0).getDate(),
+                    D = new Date(year,month,Dlast),
+                    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+                    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+                    calendar = '<tr>',
+                    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+                if (DNfirst != 0) {
+                  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+                }else{
+                  for(var  i = 0; i < 6; i++) calendar += '<td>';
+                }
+                for(var  i = 1; i <= Dlast; i++) {
+                  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+                    calendar += '<td class="today">' + i;
+                  }else{
+                    calendar += '<td>' + i;
+                  }
+                  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+                    calendar += '<tr>';
+                  }
+                }
+                for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+                document.querySelector('#'+id+' tbody').innerHTML = calendar;
+                document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+                document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+                document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+                if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+                    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+                }
+                }
+                Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+                // переключатель минус месяц
+                document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+                  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+                }
+                // переключатель плюс месяц
+                document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+                  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+                }
+                </script>
+        </div>
+      <style>
+        .d3,.di9,.di2,.d4,.dwi1 {
+          padding: 10px 0;
+        
+        }
+      </style>
+      <div class="section">
+        <div class="bricks"></div>
+      </div>
+      <div class="gap">
+        <div class="section">
+          <div class="bricks"></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="bricks"></div>
+      </div>
+      <script async="async" src="js/main.js"></script>
+      <!--	+inc('js','js/main.js',true)-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link rel="stylesheet" property="stylesheet" href="css/main.css"/>
+    <link rel="shortcut icon" href="img/logo.png">
+  </head>
+  <body>
+    <div class="set">
+      <div class="m8 ml10 t11 d12">
+        <div class="header">
+          <div class="header-nav">
+            <ul>
+              <ol ><a href="#">Главная</a></ol>
+              <ol><a href="cal.html" target="_blank">Календарь </a></ol>
+              <ol> <a href="contacts.html"target="_blank">Контакты</a></ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="m8 ml10 t11 d12">
+        <div class="content">
+          <div class="content-week">
+            <h2>Добавить заметку:</h2>
+            <ul>
+              <ol>
+                  <div class="btn btn1" data-num="1">ПН</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="2">ВТ</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="3">СР</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="4">ЧТ</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="5">ПТ</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="6">СБ</div>
+              </ol>
+              <ol>
+                  <div class="btn btn1" data-num="7">ВС</div>
+              </ol>
+            </ul>
+          </div>
+          <div class="content-day ">
+              <div class="block" id="block1">
+                  <h2>Понедельник</h2>
+                  <ul id="myUL">
+                    <li> Таск Понедельник</li>
+                  </ul>
+            <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                </div>
+                <div class="block" id="block2">
+                    <h2>Вторник</h2>
+                    <ul id="myUL">
+                      <li>Таск Вторник</li>
+                    </ul>
+                    <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                  </div>
+                <div class="block" id="block3">
+                    <h2>Среда</h2>
+                    <ul id="myUL">
+                      <li>Таск Среда</li>
+                    </ul>
+                    <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                  </div>
+                <div class="block" id="block4">
+                    <h2>Четверг</h2>
+                    <ul id="myUL">
+                      <li>Таск Четверг</li>
+                    </ul>
+                    <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                  </div>
+                <div class="block" id="block5">
+                  <h2>Пятница</h2>
+                  <ul id="myUL">
+                    <li>Таск Пятница</li>
+                  </ul>
+                  <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                </div>
+                <div class="block" id="block6">
+                    <h2>Суббота</h2>
+                    <ul id="myUL">
+                      <li>Таск Суббота</li>
+                    </ul>
+                    <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                  </div>
+                <div class="block" id="block7">
+                    <h2>Воскресенье</h2>
+                    <ul id="myUL">
+                      <li>Таск Воскресенье</li>
+                    </ul>
+                    <a id="del" class="btn-round" href="#">del</a>
+            <a class="btn-round" href="#">edit</a>
+                  </div>
+          </div>
+          <div class="content-add">
+              <input id="myInput" type="text" placeholder="Введите заметку">
+              <span onclick="newElement()" class="btn-round">Add</span>
+            </div>
+        </div>
+      </div>
+      <style>
+        .d3,.di9,.di2,.d4,.dwi1 {
+          padding: 10px 0;
+        
+        }
+      </style>
+      <div class="section">
+        <div class="bricks"></div>
+      </div>
+      <div class="gap">
+        <div class="section">
+          <div class="bricks"></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="bricks"></div>
+      </div>
+      <script async="async" src="js/main.js"></script>
+      <!--	+inc('js','js/main.js',true)-->
+    </div>
+  </body>
+  <script>
+      jQuery(document).ready(function() {
+        jQuery('.btn').click(function(event) {
+          jQuery('.block').removeClass('active')
+          var num = jQuery(this).attr('data-num');
+          jQuery('#block'+num).addClass('active')
+        });
+      });
+      
+      </script>
+</html>
