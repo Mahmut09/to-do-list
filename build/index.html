@@ -26,92 +26,130 @@
         <div class="content">
           <div class="content-week">
             <h2>Добавить заметку:</h2>
-            <ul>
-              <ol>
-                  <div class="btn btn1" data-num="1">ПН</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="2">ВТ</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="3">СР</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="4">ЧТ</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="5">ПТ</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="6">СБ</div>
-              </ol>
-              <ol>
-                  <div class="btn btn1" data-num="7">ВС</div>
-              </ol>
-            </ul>
+                  <div  class="btn" data-num="1">ПН</div>
+
+                  <div  class="btn" data-num="2">ВТ</div>
+
+                  <div  class="btn" data-num="3">СР</div>
+
+                  <div  class="btn" data-num="4">ЧТ</div>
+
+                  <div  class="btn" data-num="5">ПТ</div>
+
+                  <div  class="btn" data-num="6">СБ</div>
+
+                  <div  class="btn" data-num="7">ВС</div>
           </div>
           <div class="content-day ">
               <div class="block" id="block1">
                   <h2>Понедельник</h2>
-                  <ul id="myUL">
+                  <ul id="myUL1">
                     <li> Таск Понедельник</li>
                   </ul>
-            <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+             
+            <div class="content-add">
+                <input id="myInput1" type="text" placeholder="Введите заметку">
+                <span onclick="newElement1()" id='Add1' class="btn-round">Add</span>
+              </div>
                 </div>
-                <div class="block" id="block2">
-                    <h2>Вторник</h2>
-                    <ul id="myUL">
-                      <li>Таск Вторник</li>
-                    </ul>
-                    <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+
+
+            <div class="block" id="block2">
+                <h2>Вторник</h2>
+                <ul id="myUL2">
+                  <li>Таск Вторник</li>
+                </ul>
+                    
+            <div class="content-add">
+                <input id="myInput2" type="text" placeholder="Введите заметку">
+                <span onclick="newElement2()" id='Add2' class="btn-round">Add</span>
+              </div>
                   </div>
-                <div class="block" id="block3">
-                    <h2>Среда</h2>
-                    <ul id="myUL">
-                      <li>Таск Среда</li>
-                    </ul>
-                    <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+
+            <div class="block" id="block3">
+                <h2>Среда</h2>
+                <ul id="myUL3">
+                  <li>Таск Среда</li>
+                </ul>
+                    
+            
+            <div class="content-add">
+                <input id="myInput3" type="text" placeholder="Введите заметку">
+                <span onclick="newElement3()" id='Add3' class="btn-round">Add</span>
+              </div>
                   </div>
+
                 <div class="block" id="block4">
                     <h2>Четверг</h2>
-                    <ul id="myUL">
+                    <ul id="myUL4">
                       <li>Таск Четверг</li>
                     </ul>
-                    <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+                    
+            
+            <div class="content-add">
+                <input id="myInput4" type="text" placeholder="Введите заметку">
+                <span onclick="newElement4()" id='Add4' class="btn-round">Add</span>
+              </div>
                   </div>
+
                 <div class="block" id="block5">
                   <h2>Пятница</h2>
-                  <ul id="myUL">
+                  <ul id="myUL5">
                     <li>Таск Пятница</li>
                   </ul>
-                  <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+                  
+            <div class="content-add">
+                <input id="myInput5" type="text" placeholder="Введите заметку">
+                <span onclick="newElement5()" id='Add5' class="btn-round">Add</span>
+              </div>
                 </div>
+
                 <div class="block" id="block6">
                     <h2>Суббота</h2>
-                    <ul id="myUL">
+                    <ul id="myUL6">
                       <li>Таск Суббота</li>
                     </ul>
-                    <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
+                    
+            
+            <div class="content-add">
+                <input id="myInput6" type="text" placeholder="Введите заметку">
+                <span onclick="newElement6()" id='Add6' class="btn-round">Add</span>
+              </div>
                   </div>
-                <div class="block" id="block7">
-                    <h2>Воскресенье</h2>
-                    <ul id="myUL">
-                      <li>Таск Воскресенье</li>
-                    </ul>
-                    <a id="del" class="btn-round" href="#">del</a>
-            <a class="btn-round" href="#">edit</a>
-                  </div>
+
+                  <div class="block" id="block7">
+                      <h2>Воскресенье</h2>
+                      <ul id="myUL7">
+                        <li>Таск Воскресенье</li>
+                        </ul>
+              
+              <div class="content-add">
+                  <input id="myInput7" type="text" placeholder="Введите заметку">
+                  <span onclick="newElement7()" id='Add7' class="btn-round">Add</span>
+                </div>
+                    </div>
+
+
+                     <!-- <ul id="myUL8">
+                      <LI> TEST </LI>
+                      <LI> TEST </LI>
+                      <LI> TEST </LI>
+                      </ul>
+
+                      <div class='close' id="xMark" > </div>
+                      <a onclick="myFunction()" id="del" class="btn-round" href="#">del</a>
+
+                <script>
+                function myFunction() {
+                  var x = document.getElementById("xMark");
+                  if (x.innerHTML === " X") {
+                    x.innerHTML = " ";
+                  } else {
+                    x.innerHTML = ' X';
+                  }
+                } -->
+                </script> 
           </div>
-          <div class="content-add">
-              <input id="myInput" type="text" placeholder="Введите заметку">
-              <span onclick="newElement()" class="btn-round">Add</span>
-            </div>
         </div>
       </div>
       <style>
@@ -134,8 +172,11 @@
       <script async="async" src="js/main.js"></script>
       <!--	+inc('js','js/main.js',true)-->
     </div>
+
+
   </body>
   <script>
+
       jQuery(document).ready(function() {
         jQuery('.btn').click(function(event) {
           jQuery('.block').removeClass('active')
@@ -144,5 +185,52 @@
         });
       });
       
+
+      $("#myInput1").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add1").click();
+    }
+});
+      $("#myInput2").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add2").click();
+    }
+});
+
+      $("#myInput3").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add3").click();
+    }
+});
+
+      $("#myInput4").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add4").click();
+    }
+});
+
+      $("#myInput5").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add5").click();
+    }
+});
+
+      $("#myInput6").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add6").click();
+    }
+});
+
+      $("#myInput6").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add6").click();
+    }
+});
+
+      $("#myInput7").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#Add7").click();
+    }
+});
       </script>
 </html>

@@ -1,3 +1,16 @@
+@font-face{
+  src: url('fonts/Poiret.ttf');
+  font-family: 'Poiret'
+}
+@font-face{
+   src: url('fonts/Montserat-Regular.ttf');
+   font-family: 'Montserat-Regular'
+ }
+
+@font-face{
+   src: url('fonts/Cabin-Regular.ttf');
+   font-family: 'Cabin-Regular'
+ }
 * {
   margin: 0;
   padding: 0;
@@ -118,11 +131,18 @@ body a {
   padding-right: 30px;
   font-size: 17px;
 }
+.header-nav a{
+  font-family: 'Poiret';
+}
 
 .header ul {
   margin: 15px 5px auto;
   padding: 15px;
 }
+.header a:hover{
+  color: #1697c2
+}
+
 
 .content-week h2 {
   font-size: 25px;
@@ -156,17 +176,30 @@ body a {
 .content-day .btn-round {
   margin: 5px 10px 0 0;
   background: #02020214;
+  cursor: pointer;
+}
+.content-day .btn-round:hover{
+  background: #1697c28c;
 }
 
 .content-week,
 .content-day {
   display: inline-table;
 }
-/*.content-week #focus {
-  color: #1697c2;
+
+/* .focus{
+  border-radius: 5px;
+  width: 100px;
+  height: 28px;
   border: 1px solid #1697c2;
-  background: #02020214;
-}*/
+  padding-top: 0.163em;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  background: #1697c28c;
+  margin: 0 0 15px 20px;
+  display: block;
+} */
 
 .btn,
 .btn-large,
@@ -174,12 +207,22 @@ body a {
   border-radius: 5px;
   width: 100px;
   height: 28px;
-  border: 1px solid #000;
+  border: 1px solid #1697c2;
   padding-top: 0.163em;
   text-align: center;
   display: inline-block;
+  cursor: pointer;
+  background: #02020214;
+  font-family: 'Montserat-Regular';
 }
-.btn-focus {
+.btn:hover{
+  background: #1697c28c;
+}
+.btn{
+  display: block;
+  margin: 0 0 15px 20px;
+}
+.active_btn{
   color: #1697c2;
   border: 1px solid #1697c2;
   background: #02020214;
@@ -190,8 +233,15 @@ body a {
   width: 100px;
   height: 28px
 }
-
-
+.active{
+  font-family: 'Montserat-Regular';
+}
+.active h2{
+  font-family: 'Cabin-Regular';
+}
+.btn-round{
+  font-family: 'Montserat-Regular';
+}
 .btn-large {
   width: 215px;
   border-color: tomato;
@@ -727,13 +777,14 @@ body a {
     padding-right: 30px;
     font-size: 20px;
   }
+  
 
   .header ul {
     margin: 20px 10px auto;
     padding: 12px;
   }
   .header a{
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .content-week ol {
@@ -744,6 +795,7 @@ body a {
   .content-week h2 {
     font-size: 30px;
     padding: 20px;
+    font-family: 'Cabin-Regular';
   }
 
   .content-week a {
@@ -781,11 +833,39 @@ body a {
   }
 
   .content-add input {
-    width: 60%;
+    width: 68%;
     padding: 10px;
-    margin: 10px 0 0 20px;
+    margin: 10px 10px 0 0;
+    border: none;
+    background: #1697c2ad;
+    border-radius: 5px;
+    color: white;
   }
-
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    white;
+}
+  .close{
+    margin-left: 5px;
+    display: inline;
+    color: #1697c2;
+  }
+  .close:hover{
+    background: #1697c2;
+    color: black
+  }
+  #closeOff{
+    margin-left: 5px;
+    display: none;
+  }
   .checked {
     color: #1697c2;
     text-decoration: line-through;
@@ -795,7 +875,7 @@ body a {
   #myUL span{
     font-size: 12px;
     padding-left: 6px;
-    color: #1697c2
+    color: #1697c2;
   }
   .block {
     display: none;
@@ -805,4 +885,12 @@ body a {
   .block.active {
     display: block;
   }
+  .block.active li:hover{
+    background: #1697c248
+  }
+  .close, #myUL8{
+    margin-right: 5px;
+    display: inline-block;
+  }
+
 }
